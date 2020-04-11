@@ -8,9 +8,33 @@ namespace MVCDemo.Controllers
 {
     public class HomeController : Controller
     {
+        //public string Index()
+        //{
+        //    return typeof(Controller).Assembly.GetName().Version.ToString();//Return the version of MVC application
+        //}
+        //public ActionResult Index()//ViewBag
+        //{
+        //    ViewBag.Countries = new List<string>()
+        //    {
+        //        "India",
+        //        "USA",
+        //        "UK",
+        //        "Canada"
+        //    };
+        //    return View();
+
+        //}
         public ActionResult Index()
         {
+            ViewData["Countries"]= new List<string>()
+            {
+                "India",
+                "USA",
+                "UK",
+                "Canada"
+            };
             return View();
+
         }
 
         public ActionResult About()
